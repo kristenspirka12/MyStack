@@ -33,11 +33,19 @@ public class MyStackTests {
 	}
 	
 	@Test
-	public void () {
+	public void pushedElementAddedToStack() {
+		MyStack stack = new MyStack();
+		stack.push(1);
+		assertThat(stack.pop(), is(1));
+	}
+	
+	@Test
+	public void peekReturnsLastElement() {
 		MyStack stack = new MyStack();
 		stack.push(1);
 		stack.push(2);
-		assertThat(stack.size(), is(1));
+		assertThat(stack.peek(), is(2));
 	}
 }
+
 
