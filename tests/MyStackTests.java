@@ -46,6 +46,14 @@ public class MyStackTests {
 		stack.push(2);
 		assertThat(stack.peek(), is(2));
 	}
+	
+	@Test
+	public void returnStackElementsInArray() {
+		MyStack stack = new MyStack();
+		stack.push(5);
+		stack.push(3);
+		stack.push(8);
+	}
 }
 
 
