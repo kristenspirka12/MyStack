@@ -48,12 +48,39 @@ public class MyStackTests {
 	}
 	
 	@Test
-	public void returnStackElementsInArray() {
+	public void getElementsReturnItsElements() {
 		MyStack stack = new MyStack();
-		stack.push(5);
-		stack.push(3);
-		stack.push(8);
+		stack.push(1);
+		stack.push(2);
+		System.out.println(stack);
+		assertThat(stack.getElements(), is(new int[] {1, 2}));
 	}
+	
+	@Test
+	public void peekNotChangeSize() {
+		MyStack stack = new MyStack();
+		stack.push(1);
+		stack.push(2);
+		stack.peek();
+		assertThat(stack.size(), is(2));
+	}
+	
+	@Test
+	public void peekNotChangeElements() {
+		MyStack stack = new MyStack();
+		stack.push(1);
+		stack.push(2);
+		assertThat(stack.peek(), is(2));
+		assertThat(stack.peek(), is(2));
+	}
+	
+	@Test(expected = IllegalStateException.class)
+	public void popThrowsExceptionWhenEmtyStack() {
+		MyStack stack = new MyStack();
+		stack.pop();
+	}
+	
+	
 }
 
 
