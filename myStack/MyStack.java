@@ -25,6 +25,9 @@ public class MyStack {
 	}
 
 	public int pop() {
+		if (size < 1) {
+			throw new IllegalStateException("Tühjast pinust ei saa elemente välja küsida.");
+		}
 		size--;
 		return elements[size];
 	}
@@ -34,12 +37,21 @@ public class MyStack {
 	 */
 	@Override
 	public String toString() {
-		return "MyStack [size=" + size + ", elements=" + Arrays.toString(elements) + "]";
+		return elements != null ? Arrays.toString(getElements()) : "";
 	}
 
 	public int peek() {
-		
-		return 0;
+		return elements[size-1];
 	}
+	
+	public int[] getElements() {
+		/*int[] result = new int[size];
+		for (int i = 0; i < size; i++) {
+			result[i] = elements[i];
+		}
+		return result; */
+		return Arrays.copyOfRange(elements, 0, size);
+	}
+	
 	
 }

@@ -1,5 +1,7 @@
 package myStack;
 
+import java.util.Stack;
+
 public class MainMyStack {
 
 	public static void main(String[] args) {
@@ -15,8 +17,15 @@ public class MainMyStack {
 		stack2.push(5);
 		stack2.pop();
 		stack2.push(6);
+		System.out.println(stack2); // 5
 		
-		System.out.println(stack2.pop()); // 5
+		Stack<Integer> stack3 = new Stack<Integer>();
+		stack3.push(2);
+		stack3.push(1);
+		stack3.push(5);
+		stack3.pop();
+		stack3.push(6);
+		System.out.println(stack3);
 	}
 
 }
