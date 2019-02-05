@@ -75,12 +75,25 @@ public class MyStackTests {
 	}
 	
 	@Test(expected = IllegalStateException.class)
-	public void popThrowsExceptionWhenEmtyStack() {
+	public void popThrowsExceptionWhenEmptyStack() {
 		MyStack stack = new MyStack();
 		stack.pop();
 	}
 	
+	@Test(expected = IllegalStateException.class)
+	public void peekThrowsExceptionWhenEmtyStack() {
+		MyStack stack = new MyStack();
+		stack.peek();
+	}
 	
+	
+	
+	@Test
+	public void getElementsReturnsEmptyArrayWhenEmptyStack() {
+		MyStack stack = new MyStack();
+		stack.getElements();
+		assertThat(stack.getElements(), is(new int[0]));
+	}
 }
 
 
