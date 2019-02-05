@@ -26,6 +26,8 @@ public class MainMyStack {
 		stack3.pop();
 		stack3.push(6);
 		System.out.println(stack3);
+		
+		MyStack stack4 = new MyStack();
+		System.out.println(stack4);
 	}
-
 }

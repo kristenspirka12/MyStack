@@ -41,6 +41,9 @@ public class MyStack {
 	}
 
 	public int peek() {
+		if (size < 1) {
+			throw new IllegalStateException("Tühjast pinust ei saa elemente välja küsida.");
+		}
 		return elements[size-1];
 	}
 	
@@ -52,6 +55,5 @@ public class MyStack {
 		return result; */
 		return Arrays.copyOfRange(elements, 0, size);
 	}
-	
 	
 }
