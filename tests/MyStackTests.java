@@ -86,8 +86,6 @@ public class MyStackTests {
 		stack.peek();
 	}
 	
-	
-	
 	@Test
 	public void getElementsReturnsEmptyArrayWhenEmptyStack() {
 		MyStack stack = new MyStack();
