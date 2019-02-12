@@ -37,7 +37,7 @@ public class MyStack {
 	 */
 	@Override
 	public String toString() {
-		return elements != null ? Arrays.toString(getElements()) : "";
+		return Arrays.toString(getElements());
 	}
 
 	public int peek() {
